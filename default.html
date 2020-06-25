@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWD시작페이지</title>
+    <style>
+        #res span{
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>AWD 시작페이지</h1>
+
+    <div id="res">
+        <span>사용자 화면 : </span>
+    </div>
+
+    <script>
+        var wPX = window.outerWidth;
+        document.getElementById("res").innerHTML
+        ="<span>사용자 화면 : " + wPX +  " px</span>";
+        
+        alert("확인을 누르시면 해당 페이지가 실행 됩니다.");
+
+        if(wPX > 900){
+            location.href="desktop/index.html";
+        }
+        else{
+            location.href="mobile/index.html";
+        }
+    </script>
+</body>
+</html>
